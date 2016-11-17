@@ -11,7 +11,6 @@
         <h3>
             @Model.CommonName
 
-
             @if (ViewBag.IsInFavorites)
             {
                 <a href="/StopPoint/RemoveFromFavorites/@Model.NaptanId?returnUrl=@self"><span class="glyphicon glyphicon-star"></span></a>}
@@ -25,8 +24,9 @@
                 else
                 {
                     <a href="/Account/Login/?returnUrl=@self"><span class="glyphicon glyphicon-star-empty"></span></a>
-                }
+}
             }
+           
         </h3>
         <h4>Modes of transport:</h4>
         <ul>
@@ -40,6 +40,23 @@
                 <span>Accessibility:</span>
                 <span>@Model.AccessibilitySummary</span>
             </div>}
+        <div>
+            @if (ViewBag.IsInFavorites)
+            {
+                <a href="/StopPoint/RemoveFromFavorites/@Model.NaptanId?returnUrl=@self">Remove from favourites</a>}
+
+            else
+            {
+                if (Request.IsAuthenticated)
+                {
+                    <a href="/StopPoint/AddToFavorites/@Model.NaptanId?returnUrl=@self">Add to favourites</a>
+}
+                else
+                {
+                    <a href="/Account/Login/?returnUrl=@self">Add to favourites</a>
+}
+            }
+        </div>
     </div>
     <div class="col-md-9">
         <div id="map"></div>
