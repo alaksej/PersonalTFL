@@ -1,0 +1,17 @@
+﻿@using Microsoft.AspNet.Identity
+@{
+    ViewBag.Title = "Home";
+}
+
+<div class="jumbotron">
+    <h1>Personal TFL</h1>
+    <p class="lead">Your favourite transport stops in London at your fingertips!</p>
+    @if (!Request.IsAuthenticated)
+    {
+        <p><a href="/Account/Login" class="btn btn-primary btn-lg">Log in &raquo;</a></p>
+    }
+    
+</div>
+
+
+@Html.Partial("SearchStopPointPartial")

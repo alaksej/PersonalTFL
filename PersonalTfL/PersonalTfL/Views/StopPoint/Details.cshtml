@@ -1,0 +1,65 @@
+﻿@model Tfl.Api.Presentation.Entities.StopPoint
+@{
+    ViewBag.Title = "Details";
+    var self = "/StopPoint/Details/" + Model.NaptanId;
+}
+
+<h2>Details</h2>
+
+<div class="row">
+    <div class="col-md-3">
+        <h3>
+            @Model.CommonName
+
+
+            @if (ViewBag.IsInFavorites)
+            {
+                <a href="/StopPoint/RemoveFromFavorites/@Model.NaptanId?returnUrl=@self"><span class="glyphicon glyphicon-star"></span></a>}
+
+            else
+            {
+                if (Request.IsAuthenticated)
+                {
+                    <a href="/StopPoint/AddToFavorites/@Model.NaptanId?returnUrl=@self"><span class="glyphicon glyphicon-star-empty"></span></a>
+}
+                else
+                {
+                    <a href="/Account/Login/?returnUrl=@self"><span class="glyphicon glyphicon-star-empty"></span></a>
+                }
+            }
+        </h3>
+        <h4>Modes of transport:</h4>
+        <ul>
+            @foreach (var item in Model.Modes)
+            {
+                <li><span>@item</span></li>}
+        </ul>
+        @if (!String.IsNullOrWhiteSpace(Model.AccessibilitySummary))
+        {
+            <div class="row">
+                <span>Accessibility:</span>
+                <span>@Model.AccessibilitySummary</span>
+            </div>}
+    </div>
+    <div class="col-md-9">
+        <div id="map"></div>
+    </div>
+</div>
+
+
+<script>
+    function initMap() {
+    var pos = {lat: @Model.Lat, lng: @Model.Lon};
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 10,
+        center: pos
+    });
+    var marker = new google.maps.Marker({
+        position: pos,
+        map: map
+    });
+    }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBzMwPa3m2qRc12MUz_O_PE4k8-s11aU4&callback=initMap">
+</script>

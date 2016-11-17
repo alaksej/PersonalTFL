@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Tfl.Api.Presentation.Entities.StopPoint>
+@{
+    ViewBag.Title = "Manage";
+    var self = "/StopPoint/Manage/";
+}
+
+<h2>Your favorite stops</h2>
+
+@if (!Request.IsAuthenticated)
+{
+    <p>Please, <a href="/Account/Login/?returnUrl=@self">log in</a> to see your favorite stops</p>
+}
+else
+{
+    if (Model.Count() == 0)
+    {
+        <p>Your favorites list is empty</p>
+        @Html.Partial("SearchStopPointPartial")
+    }
+    else
+    {
+        <table class="table">
+            <tr>
+                <th>Stop name</th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr id="@item.NaptanId">
+                    <td>
+                        @item.CommonName
+                    </td>
+                    <td>
+                        @Html.ActionLink("Details", "Details", new { id = item.NaptanId })
+                    </td>
+                    <td>
+                        @Html.ActionLink("Remove", "RemoveFromFavorites", new { id = item.NaptanId, returnUrl = "/StopPoint/Manage/" })
+                    </td>
+                </tr>
+}
+        </table>
+    }
+}

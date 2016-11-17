@@ -1,0 +1,18 @@
+﻿
+
+@using (Html.BeginForm("Search", "StopPoint", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Get, new { @class = "form-horizontal", role = "form" }))
+{
+    <div class="form-group">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <input type="text" class="form-control" name="query" placeholder="Search for transport stops, e.g. victoria">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="submit">Search</button>
+                    </span>
+                </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
+    </div>
+    
+}

@@ -1,0 +1,30 @@
+2016-11-17 13:00:53,963 [1] INFO PersonalTfL.LoggerConfig - Application started
+2016-11-17 13:00:57,706 [10] DEBUG StopPointController - Manage your stoppoints
+2016-11-17 13:05:39,096 [1] INFO PersonalTfL.LoggerConfig - Application started
+2016-11-17 13:06:04,133 [13] DEBUG StopPointController - Data Source=ALEX-PC\SQLEXPRESS;Initial Catalog=MyPersonalTfL.Models.StopPointContext;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False
+2016-11-17 13:06:04,134 [13] DEBUG StopPointController - MyPersonalTfL.Models.StopPointContext
+2016-11-17 13:06:04,142 [13] DEBUG StopPointController - Manage your stoppoints
+2016-11-17 14:34:51,418 [349] INFO PersonalTfL.LoggerConfig - Application started
+2016-11-17 14:34:56,321 [346] DEBUG StopPointController - Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\code\api.tfl\PersonalTfL\PersonalTfL\App_Data\StopPointContext.mdf;Integrated Security=True
+2016-11-17 14:34:56,321 [346] DEBUG StopPointController - 
+2016-11-17 14:34:56,330 [346] DEBUG StopPointController - Favorites enetered
+2016-11-17 14:35:15,527 [346] DEBUG StopPointController - Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\code\api.tfl\PersonalTfL\PersonalTfL\App_Data\StopPointContext.mdf;Integrated Security=True
+2016-11-17 14:35:15,527 [346] DEBUG StopPointController - 
+2016-11-17 14:35:15,527 [346] DEBUG StopPointController - Favorites enetered
+2016-11-17 14:35:19,326 [342] DEBUG StopPointController - Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\code\api.tfl\PersonalTfL\PersonalTfL\App_Data\StopPointContext.mdf;Integrated Security=True
+2016-11-17 14:35:19,326 [342] DEBUG StopPointController - 
+2016-11-17 14:35:22,937 [331] DEBUG StopPointController - Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\code\api.tfl\PersonalTfL\PersonalTfL\App_Data\StopPointContext.mdf;Integrated Security=True
+2016-11-17 14:35:22,937 [331] DEBUG StopPointController - 
+2016-11-17 14:35:25,897 [344] DEBUG StopPointController - Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\code\api.tfl\PersonalTfL\PersonalTfL\App_Data\StopPointContext.mdf;Integrated Security=True
+2016-11-17 14:35:25,897 [344] DEBUG StopPointController - 
+2016-11-17 14:35:25,918 [342] DEBUG StopPointController - Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\code\api.tfl\PersonalTfL\PersonalTfL\App_Data\StopPointContext.mdf;Integrated Security=True
+2016-11-17 14:35:25,918 [342] DEBUG StopPointController - 
+2016-11-17 14:35:28,048 [331] DEBUG StopPointController - Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\code\api.tfl\PersonalTfL\PersonalTfL\App_Data\StopPointContext.mdf;Integrated Security=True
+2016-11-17 14:35:28,048 [331] DEBUG StopPointController - 
+2016-11-17 14:35:28,048 [331] DEBUG StopPointController - Favorites enetered
+2016-11-17 14:51:29,957 [1] INFO PersonalTfL.LoggerConfig - Application started
+2016-11-17 14:51:30,184 [282] DEBUG StopPointController - Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\code\api.tfl\PersonalTfL\PersonalTfL\App_Data\StopPointContext.mdf;Integrated Security=True
+2016-11-17 14:51:30,184 [282] DEBUG StopPointController - 
+2016-11-17 14:57:02,646 [280] DEBUG StopPointController - Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\code\api.tfl\PersonalTfL\PersonalTfL\App_Data\StopPointContext.mdf;Integrated Security=True
+2016-11-17 14:57:02,646 [280] DEBUG StopPointController - 
+2016-11-17 14:57:02,648 [280] DEBUG StopPointController - Favorites enetered

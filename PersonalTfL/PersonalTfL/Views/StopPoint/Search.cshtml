@@ -1,0 +1,36 @@
+﻿@model Tfl.Api.Presentation.Entities.SearchResponse
+@{ 
+    ViewBag.Title = "Search";
+}
+<div style="margin-top: 10px">
+    @Html.Partial("SearchStopPointPartial")
+</div>
+<h3>
+    Search results for '@Model.Query'
+</h3>
+
+@if (Model.Matches.Count() == 0)
+{
+    <p>No results found</p>
+}
+else
+{
+    <table class="table">
+        <tr>
+            <th>Stop name</th>
+        </tr>
+
+        @foreach (var item in Model.Matches)
+        {
+            <tr id="@item.Id">
+                <td>
+                    @item.Name
+                </td>
+                <td>
+                    @Html.ActionLink("Details", "Details", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    </table>
+}
+
